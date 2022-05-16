@@ -1,6 +1,8 @@
 package exemplo;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class LoteRepository {
@@ -24,5 +26,13 @@ public class LoteRepository {
     public void listProduto(){
         lotes.toString();
 
+    }
+
+
+    public List<Lote> getAll() {
+        List<Lote> listaLotes = new ArrayList<Lote>();
+        for (Lote lote: lotes.values())  {
+            listaLotes.add(lote);
+        }
     }
 }
